@@ -21,7 +21,9 @@
   -->
 </head>
 <body>
-  <mris-test-app>Loading...</mris-test-app>
+  <mris-test-app></mris-test-app>
+
+  <button onclick="bootstrapStuff()">Bootstrap My App</button>  
 
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/reflect-metadata/Reflect.js"></script>
@@ -30,9 +32,14 @@
   <script src="vendor/zone.js/dist/zone.js"></script>
 
   <script>
-    System.import('system-config.js').then(function () {
-      System.import('main');
-    }).catch(console.error.bind(console));
+    
+    function bootstrapStuff() {
+      System.import('system-config.js').then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+    }
+    
+
   </script>
 </body>
 </html>
